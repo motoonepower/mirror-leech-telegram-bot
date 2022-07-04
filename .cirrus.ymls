@@ -1,0 +1,14 @@
+task:
+
+  name: Test
+  timeout_in: 120m
+  container:
+    dockerfile: Dockerfile
+    cpu: 8
+    memory: 32G
+
+  env:
+    CIRRUS_WORKING_DIR: "/tmp/ci"\
+    
+  run_bot:
+    - bash run_bot.sh    
